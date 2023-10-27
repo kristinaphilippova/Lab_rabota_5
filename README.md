@@ -10,6 +10,9 @@ ___
 
 ## Тесты программы
 ![image](https://github.com/kristinaphilippova/Lab_rabota_5/assets/146865479/e1a6354f-3ab0-4fe3-a353-8bbad0117145)
+### Тесты контроля ввода текста
+![image](https://github.com/kristinaphilippova/Lab_rabota_5/assets/146865479/cc9ddaff-a2f2-4744-bb4b-c54cd308b12d)
+
 ___
 # Использование программы
 ## Какой файл стоит открывать
