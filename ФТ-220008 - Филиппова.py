@@ -1,7 +1,7 @@
 def caesar_encrypt(text, shift):
     result = ""
     for char in text:
-        if char.isalpha():
+        if char.isalpha() and char.isascii() and char.isascii():
             if char.islower():
                 result += chr((ord(char) - ord('a') + shift) % 26 + ord('a'))
             else:
@@ -19,6 +19,8 @@ def main():
     while True:
         try:
             text = input("Введите текст, используя английский алфавит: ")
+            if not any(char.isalpha() and char.isascii() for char in text):
+                raise ValueError
             shift = int(input("Введите шаг сдвига: "))
             break
         except ValueError:
