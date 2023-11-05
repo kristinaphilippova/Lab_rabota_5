@@ -1,64 +1,35 @@
-def encrypt(text, shift):
-    encrypted_text = ''
+def caesar_encrypt(text, shift):
+    result = ""
     for char in text:
-        if char.isalpha() and char.isupper():
-            encrypted_char = chr((ord(char) - 65 + shift) % 26 + 65)
-            encrypted_text += encrypted_char
-        elif char.isalpha() and char.islower():
-            encrypted_char = chr((ord(char) - 97 + shift) % 26 + 97)
-            encrypted_text += encrypted_char
+        if char.isalpha():
+            if char.islower():
+                result += chr((ord(char) - ord('a') + shift) % 26 + ord('a'))
+            else:
+                result += chr((ord(char) - ord('A') + shift) % 26 + ord('A'))
         else:
-            encrypted_text += char
-    return encrypted_text
+            result += char
+    return result
 
 
-def decrypt(text, shift):
-    decrypted_text = ''
-    for char in text:
-        if char.isalpha() and char.isupper():
-            decrypted_char = chr((ord(char) - 65 - shift) % 26 + 65)
-            decrypted_text += decrypted_char
-        elif char.isalpha() and char.islower():
-            decrypted_char = chr((ord(char) - 97 - shift) % 26 + 97)
-            decrypted_text += decrypted_char
-        else:
-            decrypted_text += char
-    return decrypted_text
+def caesar_decrypt(text, shift):
+    return caesar_encrypt(text, -shift)
 
 
-def validate_alphabet(text):
-    for char in text:
-        if not char.isalpha() and not char.isspace() and ord(char.lower()) < 97 or ord(char.lower()) > 122:
-            return False
-    return True
-
-
-def validate_shift(shift):
-    return isinstance(shift, int) and shift > 0
-
-
-def caesar_cipher():
-    text = input('Введите текст: ')
-
-    if not validate_alphabet(text):
-        print('Неверное использование алфавита.')
-        return
-
-    shift = None
-    while shift is None:
-        shift_input = input('Введите шаг сдвига: ')
+def main():
+    while True:
         try:
-            shift = int(shift_input)
-            if not validate_shift(shift):
-                raise ValueError
+            text = input("Введите текст, используя английский алфавит: ")
+            shift = int(input("Введите шаг сдвига: "))
+            break
         except ValueError:
-            print('Неправильное значение шага сдвига.')
+            print("Ошибка ввода! Попробуйте снова.")
 
-    encrypted_text = encrypt(text, shift)
-    decrypted_text = decrypt(encrypted_text, shift)
+    encrypted_text = caesar_encrypt(text, shift)
+    decrypted_text = caesar_decrypt(encrypted_text, shift)
 
-    print('Зашифрованный текст:', encrypted_text)
-    print('Расшифрованный текст:', decrypted_text)
+    print("Зашифрованный текст:", encrypted_text)
+    print("Расшифрованный текст:", decrypted_text)
 
 
-caesar_cipher()
+if __name__ == "__main__":
+    main()
