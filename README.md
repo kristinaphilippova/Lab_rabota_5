@@ -9,9 +9,13 @@ ___
 Программа выполняет шифрование и расшифровку с помошью шифра Цезаря. 
 
 ## Тесты программы
-![image](https://github.com/kristinaphilippova/Lab_rabota_5/assets/146865479/e1a6354f-3ab0-4fe3-a353-8bbad0117145)
+![image](https://github.com/kristinaphilippova/Lab_rabota_5/assets/146865479/2d202945-13d5-4a60-9525-6a811fac9bb1)
+![image](https://github.com/kristinaphilippova/Lab_rabota_5/assets/146865479/2fe8b060-0a46-4da3-95a9-3065bc14948d)
+![image](https://github.com/kristinaphilippova/Lab_rabota_5/assets/146865479/84d10460-f3a0-448c-8b85-d4604cbda207)
+
 ### Тесты контроля ввода текста
-![image](https://github.com/kristinaphilippova/Lab_rabota_5/assets/146865479/cc9ddaff-a2f2-4744-bb4b-c54cd308b12d)
+![image](https://github.com/kristinaphilippova/Lab_rabota_5/assets/146865479/35b4a60b-9f3a-4a13-874c-dc2f2f5c9bc7)
+
 
 ___
 # Использование программы
